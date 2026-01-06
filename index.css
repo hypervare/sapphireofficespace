@@ -890,12 +890,16 @@ body {
 .contain-video {
   background: #000;
   border: 20px solid white;
+  overflow: hidden;
+  position: relative
 }
 
-.contain-video video {
-  width: 100%;
+.contain-video iframe {
+  position: absolute;
+  left: -108.3%;
+  width: 316.5%;
   height: 100%;
-  /* border: 20px solid white; */
+  border: none;
   object-fit: cover;
 }
 
@@ -2046,4 +2050,5 @@ small {
     text-align: center;
   }
 }
+
 
