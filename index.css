@@ -503,6 +503,82 @@ body {
         font-size: 36px;
     }
 }
+/* ===============================
+   MOBILE OPTIMIZATION
+   =============================== */
+
+/* Tablets & large phones */
+@media (max-width: 600px) {
+  .marketopp {
+    padding: 48px 20px;
+  }
+
+  .market-wrapper {
+    padding: 0;
+    gap: 48px;
+  }
+
+  .market-title {
+    font-size: 32px;
+  }
+
+  .market-desc {
+    max-width: 100%;
+  }
+
+  .market-highlight {
+    padding: 24px;
+  }
+
+  .market-highlight h3 {
+    font-size: 36px;
+  }
+
+  .market-card {
+    padding: 24px;
+  }
+}
+
+/* Small phones (320px – 360px) */
+@media (max-width: 360px) {
+  .market-tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .market-title {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .market-desc {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .market-highlight {
+    padding: 20px;
+  }
+
+  .market-highlight h3 {
+    font-size: 30px;
+  }
+
+  .market-card {
+    padding: 20px;
+  }
+
+  .market-card h4 {
+    font-size: 22px;
+  }
+
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+}
+
 
 
 
@@ -2050,5 +2126,3 @@ small {
     text-align: center;
   }
 }
-
-
