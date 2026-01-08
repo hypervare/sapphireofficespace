@@ -336,7 +336,7 @@ body {
   }
 
   .hero-right {
-    height: 420px;
+    display: none;
   }
 }
 
@@ -2126,3 +2126,4 @@ small {
     text-align: center;
   }
 }
+
