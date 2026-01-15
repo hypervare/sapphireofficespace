@@ -2127,3 +2127,100 @@ small {
   }
 }
 
+
+
+
+
+
+
+
+
+
+section.mobile-bottom-section{
+    display:none;
+}
+
+/* ============ MOBILE VIEW ONLY ============ */
+@media screen and (max-width:768px){
+
+    body{
+        padding-bottom:95px; /* prevent content overlap */
+        font-family:"Inter","Segoe UI",Arial,sans-serif;
+    }
+
+    /* ===== STICKY BOTTOM BAR ===== */
+    section.mobile-bottom-section{
+        display:flex;
+        position:fixed;
+        bottom:0;
+        left:0;
+        width:100%;
+        height:82px;
+
+        /* Sapphire blue theme */
+        background:linear-gradient(
+            135deg,
+            #0b1530 0%,
+            #0e1d3d 50%,
+            #101f3f 100%
+        );
+
+        box-shadow:0 -10px 35px rgba(0,0,0,0.45);
+        border-top:1px solid rgba(255,255,255,0.08);
+        z-index:9999;
+    }
+
+    /* ===== CTA ITEMS ===== */
+    .mobile-bottom-section .cta-item{
+        flex:1;
+        text-decoration:none;
+        color:#ffffff;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:6px;
+        font-size:12px;
+        font-weight:600;
+        position:relative;
+        transition:background 0.25s ease;
+    }
+
+    /* Divider lines */
+    .mobile-bottom-section .cta-item:not(:last-child)::after{
+        content:"";
+        position:absolute;
+        right:0;
+        top:18%;
+        height:64%;
+        width:1px;
+        background:rgba(255,255,255,0.12);
+    }
+
+    /* ===== ICON STYLING (GOLD BUTTON STYLE) ===== */
+    .mobile-bottom-section .cta-item i{
+        font-size:20px;
+        padding:9px;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        /* Button gold background */
+        background:#f5c400;
+
+        /* Gold / yellow icon color */
+        color:#7a5a00;
+
+        /* Premium glow */
+        box-shadow:
+            0 0 0 1px rgba(245,196,0,0.45),
+            0 6px 14px rgba(245,196,0,0.25);
+    }
+
+    /* Active touch effect */
+    .mobile-bottom-section .cta-item:active{
+        background:rgba(255,255,255,0.08);
+    }
+}
+
