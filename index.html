@@ -1088,7 +1088,10 @@
 
   // Show popup immediately (you can change later)
   window.addEventListener("DOMContentLoaded", () => {
-    popup.style.display = "flex";
+      function popupSapphire(){
+          popup.style.display = "flex";
+      }
+      setTimeout(popupSapphire, 10000);
   });
 
   // Close popup
@@ -1127,6 +1130,7 @@
 
 </body>
 </html>
+
 
 
 
