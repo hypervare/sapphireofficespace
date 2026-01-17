@@ -1054,25 +1054,80 @@
 
 
 
-<script>
-  const navToggle = document.getElementById("navToggle");
-  const navLinks = document.getElementById("navLinks");
+<div class="popup-overlay" id="popup">
+  <div class="popup-card">
+    <button class="close-btn" id="closeBtn">&times;</button>
 
-  navToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
+    <h2>Get Exclusive Details</h2>
+    <p>Fill the form and our team will contact you</p>
+
+    <form id="popupForm">
+  <input id="pname" type="text" placeholder="Your Name" required>
+  <input id="pemail" type="email" placeholder="Email Address" required>
+  <input id="pphone" type="tel" placeholder="Phone Number" required>
+  <button type="submit" class="submit-btn">Submit</button>
+</form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  const popup = document.getElementById("popup");
+  const closeBtn = document.getElementById("closeBtn");
+  const popupForm = document.getElementById("popupForm");
+
+  // Show popup immediately (you can change later)
+  window.addEventListener("DOMContentLoaded", () => {
+    popup.style.display = "flex";
   });
 
-  // Optional: close menu on link click
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-    });
+  // Close popup
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  // Submit form → email
+  popupForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("pname").value.trim();
+    const email = document.getElementById("pemail").value.trim();
+    const phone = document.getElementById("pphone").value.trim();
+
+    
+    const TO_EMAIL = "support@wdvilasati.com";
+
+    const subject = encodeURIComponent("New Inquiry from Website");
+    const body = encodeURIComponent(
+      `New Inquiry Received:\n\n` +
+      `Name: ${name}\n` +
+      `Email: ${email}\n` +
+      `Phone: ${phone}\n`
+    );
+
+    // Open user's mail app
+    window.location.href = `mailto:${TO_EMAIL}?subject=${subject}&body=${body}`;
+
+    // Close popup after submit
+    popup.style.display = "none";
   });
 </script>
 
 
+
 </body>
 </html>
+
 
 
 
