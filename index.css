@@ -928,6 +928,16 @@ body {
     .payment-header h2 {
         font-size: 32px;
     }
+    .installments li {
+    background: #f8fafc;
+    padding: 14px 18px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    gap: 50px;
+}
 }
 
 
@@ -2331,5 +2341,6 @@ section.mobile-bottom-section{
   font-weight: 600;
   cursor: pointer;
 }
+
 
 
